@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 15% 5%;
+    --foreground: 45 30% 90%;
+
+    --card: 240 12% 8%;
+    --card-foreground: 45 30% 90%;
+
+    --popover: 240 12% 8%;
+    --popover-foreground: 45 30% 90%;
+
+    --primary: 43 80% 55%;
+    --primary-foreground: 240 15% 5%;
+
+    --secondary: 270 20% 15%;
+    --secondary-foreground: 45 30% 90%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 45 10% 55%;
+
+    --accent: 270 30% 20%;
+    --accent-foreground: 45 30% 90%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 43 80% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 12% 6%;
+    --sidebar-foreground: 45 30% 90%;
+    --sidebar-primary: 43 80% 55%;
+    --sidebar-primary-foreground: 240 15% 5%;
+    --sidebar-accent: 270 20% 15%;
+    --sidebar-accent-foreground: 45 30% 90%;
+    --sidebar-border: 240 10% 15%;
+    --sidebar-ring: 43 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@layer utilities {
+  .gold-glow {
+    text-shadow: 0 0 20px hsl(43 80% 55% / 0.3), 0 0 40px hsl(43 80% 55% / 0.1);
+  }
+
+  .card-mystical {
+    background: linear-gradient(145deg, hsl(240 12% 8%), hsl(270 15% 10%));
+    border: 1px solid hsl(43 80% 55% / 0.15);
+    box-shadow: 0 0 30px hsl(270 30% 20% / 0.2), inset 0 1px 0 hsl(43 80% 55% / 0.05);
+  }
+
+  .audio-player::-webkit-media-controls-panel {
+    background: hsl(240 12% 12%);
+  }
+}
